@@ -186,6 +186,7 @@ For support and questions, please refer to the ALX Software Engineering Program 
 
 ## 🔗 Live Demo
 
-Visit the repository: [https://github.com/kimoban/alx-pwa-0x01](https://github.com/kimoban/alx-pwa-0x01)
+- [Live site on Vercel](https://alx-pwa-0x01-jet-seven.vercel.app/)
+- [Repository on GitHub](https://github.com/kimoban/alx-pwa-0x01)
 
 ### Built with ❤️ for the ALX Software Engineering Program
