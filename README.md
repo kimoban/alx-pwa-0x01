@@ -1,6 +1,6 @@
-# ALX Movie App (CineSeek)
+# ALX Movie App (alx-pwa-0x01)
 
-A modern movie discovery application built with Next.js 14, TypeScript, and Tailwind CSS. Discover, explore, and enjoy movies from around the world using the MoviesDatabase API via RapidAPI.
+A modern movie discovery application built with Next.js 14, TypeScript, and Tailwind CSS. Discover, explore, and enjoy movies from around the world using The Movie Database (TMDB) API.
 
 ## 🎬 Features
 
@@ -8,7 +8,7 @@ A modern movie discovery application built with Next.js 14, TypeScript, and Tail
 - **Advanced Search**: Find movies by title with real-time search
 - **Year & Genre Filtering**: Filter movies by release year and genre
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
-- **Modern UI**: Clean and intuitive CineSeek-branded interface with custom styling
+- **Modern UI**: Clean and intuitive interface with custom styling
 - **Movie Cards**: Detailed movie information with posters, ratings, and descriptions
 - **Pagination**: Navigate through extensive movie collections
 - **Loading States**: Smooth loading animations and transitions
@@ -18,44 +18,44 @@ A modern movie discovery application built with Next.js 14, TypeScript, and Tail
 - **Framework**: Next.js 14 (Pages Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS with custom CineSeek branding
-- **API**: MoviesDatabase API via RapidAPI
+- **API**: The Movie Database (TMDB) API
 - **Package Manager**: npm
 
 ## 📁 Project Structure
 
 ```bash
-alx-project-0x14/                     # Repository root
-├── README.md                         # Project documentation
-├── .github/                          # GitHub configuration
-├── .gitignore                        # Git ignore rules
-├── .vscode/                          # VS Code settings
-└── alx-movie-app/                    # Next.js application
-    ├── components/
-    │   ├── commons/
-    │   │   ├── Button.tsx            # CineSeek-branded button component
-    │   │   ├── Loading.tsx           # Loading spinner with backdrop
-    │   │   └── MovieCard.tsx         # Movie display card
-    │   └── layouts/
-    │       ├── Footer.tsx            # App footer with social links
-    │       ├── Header.tsx            # Navigation header
-    │       └── Layout.tsx            # Main layout wrapper
-    ├── interfaces/
-    │   └── index.ts                  # TypeScript type definitions
-    ├── pages/
-    │   ├── api/
-    │   │   └── fetch-movies.ts       # MoviesDatabase API integration
-    │   ├── movies/
-    │   │   └── index.tsx             # Movies listing page
-    │   ├── _app.tsx                  # App wrapper
-    │   ├── _document.tsx             # HTML document structure
-    │   └── index.tsx                 # Landing page with hero section
-    ├── public/                       # Static assets
-    ├── styles/
-    │   └── globals.css               # Global styles and custom utilities
-    ├── .env.local                    # Environment variables
-    ├── package.json                  # Dependencies and scripts
-    ├── next.config.ts                # Next.js configuration
-    └── tsconfig.json                 # TypeScript configuration
+alx-pwa-0x01/                        # Repository root
+├── README.md                        # Project documentation
+├── .github/                         # GitHub configuration
+├── .gitignore                       # Git ignore rules
+├── .vscode/                         # VS Code settings
+└── alx-movie-app/                   # Next.js application
+   ├── components/
+   │   ├── commons/
+   │   │   ├── Button.tsx           # Reusable button component
+   │   │   ├── Loading.tsx          # Loading spinner
+   │   │   └── MovieCard.tsx        # Movie display card
+   │   └── layouts/
+   │       ├── Footer.tsx           # App footer
+   │       ├── Header.tsx           # Navigation header
+   │       └── Layout.tsx           # Main layout wrapper
+   ├── interfaces/
+   │   └── index.ts                 # TypeScript type definitions
+   ├── pages/
+   │   ├── api/
+   │   │   └── fetch-movies.ts      # TMDB API integration
+   │   ├── movies/
+   │   │   └── index.tsx            # Movies listing page
+   │   ├── _app.tsx                 # App wrapper
+   │   ├── _document.tsx            # HTML document structure
+   │   └── index.tsx                # Landing page
+   ├── public/                      # Static assets
+   ├── styles/
+   │   └── globals.css              # Global styles
+   ├── .env.local                   # Environment variables
+   ├── package.json                 # Dependencies and scripts
+   ├── next.config.ts               # Next.js configuration
+   └── tsconfig.json                # TypeScript configuration
 ```
 
 ## 🚀 Getting Started
@@ -71,8 +71,8 @@ alx-project-0x14/                     # Repository root
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/kimoban/alx-project-0x14.git
-   cd alx-project-0x14/alx-movie-app
+   git clone https://github.com/kimoban/alx-pwa-0x01.git
+   cd alx-pwa-0x01/alx-movie-app
    ```
 
 2. **Install dependencies:**
@@ -85,10 +85,10 @@ alx-project-0x14/                     # Repository root
    Create a `.env.local` file in the `alx-movie-app` directory and add your API key:
 
    ```env
-   MOVIE_API_KEY=your_rapidapi_key_here
+   TMDB_API_KEY=your_tmdb_api_key_here
    ```
 
-   Get your API key from [RapidAPI MoviesDatabase](https://rapidapi.com/SAdrian/api/moviesdatabase/)
+   Get your API key from [TMDB](https://www.themoviedb.org/documentation/api)
 
 4. **Run the development server:**
 
@@ -124,31 +124,31 @@ alx-project-0x14/                     # Repository root
 
 ### API Integration
 
-- `/api/fetch-movies` - Fetch movies from MoviesDatabase API with filtering options
+- `/api/fetch-movies` - Fetch movies from TMDB API with filtering options
 
 ## 🌟 Components
 
 ### Common Components
 
-- **Button**: Reusable CineSeek-branded button with yellow accent
-- **Loading**: Animated loading spinner with backdrop blur effect
+- **Button**: Reusable button with accent styling
+- **Loading**: Animated loading spinner
 - **MovieCard**: Movie display component with poster, title, year, and genre
 
 ### Layout Components
 
-- **Header**: CineSeek navigation with logo and responsive menu
-- **Footer**: Application footer with social media links
+- **Header**: Navigation with logo and responsive menu
+- **Footer**: Application footer
 - **Layout**: Main layout wrapper for consistent page structure
 
 ## 🔑 Environment Variables
 
 | Variable | Description | Required |
 |----------|-------------|----------|
-| `MOVIE_API_KEY` | RapidAPI key for MoviesDatabase API | Yes |
+| `TMDB_API_KEY` | API key for The Movie Database (TMDB) | Yes |
 
 ## 📱 Responsive Design
 
-The CineSeek application is fully responsive and optimized for:
+The ALX Movie App is fully responsive and optimized for:
 
 - **Desktop**: Full-featured experience with grid layouts
 - **Tablet**: Adapted layouts for medium screens
@@ -156,7 +156,7 @@ The CineSeek application is fully responsive and optimized for:
 
 ## 🎨 CineSeek Design System
 
-- **Primary Color**: #E2D609 (CineSeek Yellow)
+- **Primary Color**: #E2D609 (Accent Yellow)
 - **Background**: #171D22 (Dark theme)
 - **Typography**: Clean, modern fonts with good readability
 - **Custom Utilities**: Line clamping, smooth transitions, hero backgrounds
@@ -186,8 +186,6 @@ For support and questions, please refer to the ALX Software Engineering Program 
 
 ## 🔗 Live Demo
 
-Visit the live application: **https://github.com/kimoban/alx-project-0x14**
+Visit the repository: [https://github.com/kimoban/alx-pwa-0x01](https://github.com/kimoban/alx-pwa-0x01)
 
----
-
-**Built with ❤️ for the ALX Software Engineering Program**
+### Built with ❤️ for the ALX Software Engineering Program
