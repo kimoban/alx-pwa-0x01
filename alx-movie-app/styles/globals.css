@@ -1,31 +1,86 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f9fafb;
-  --foreground: #111827;
+  --background: #08111f;
+  --background-soft: #0f1c31;
+  --foreground: #f3f7fb;
+  --muted: #a8b5c8;
+  --accent: #f3c94b;
+  --accent-strong: #ffb703;
+  --border: rgba(148, 163, 184, 0.18);
+  --border-strong: rgba(148, 163, 184, 0.32);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-body), "Segoe UI", sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #111827;
-    --foreground: #f9fafb;
-  }
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  min-height: 100vh;
+  background-image:
+    radial-gradient(
+      circle at top left,
+      rgba(243, 201, 75, 0.12),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at top right,
+      rgba(45, 212, 191, 0.1),
+      transparent 18%
+    ),
+    linear-gradient(180deg, #08111f 0%, #0b1426 48%, #08111f 100%);
 }
 
-/* Custom utility classes for movie app */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.32),
+    transparent 75%
+  );
+}
+
+a,
+button,
+input,
+select {
+  transition:
+    color 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 2px solid rgba(243, 201, 75, 0.55);
+  outline-offset: 2px;
+}
+
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -33,18 +88,52 @@ body {
   overflow: hidden;
 }
 
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* Smooth transitions for better UX */
-* {
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+.text-balance {
+  text-wrap: balance;
 }
 
 .hero-background {
-  background-image: url("https://themebeyond.com/html/movflx/img/bg/breadcrumb_bg.jpg");
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(8, 17, 31, 0.92) 0%,
+      rgba(8, 17, 31, 0.74) 44%,
+      rgba(8, 17, 31, 0.78) 100%
+    ),
+    url("https://themebeyond.com/html/movflx/img/bg/breadcrumb_bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.section-shell {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(
+    180deg,
+    rgba(15, 28, 49, 0.82),
+    rgba(7, 13, 25, 0.78)
+  );
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+}
+
+.film-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.12;
+  mix-blend-mode: soft-light;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.4) 0.6px,
+    transparent 0.6px
+  );
+  background-size: 10px 10px;
+}
+
+@media (min-width: 768px) {
+  .section-shell {
+    border-radius: 32px;
+  }
 }
