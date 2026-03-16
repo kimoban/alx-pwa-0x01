@@ -1,36 +1,45 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
 export interface ComponentProps {
   children: ReactNode;
 }
 
-export interface ButtonProps {
+export interface ButtonProps
+  extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "onClick"> {
   title: string;
   action?: () => void;
+  variant?: "primary" | "secondary" | "ghost";
+  size?: "sm" | "md" | "lg";
 }
 
-export interface MovieProps {
-  id?: string;
-  posterImage: string;
-  releaseYear: string;
+export interface MovieCardProps {
+  posterImage?: string | null;
+  releaseYear?: number | null;
   title: string;
 }
 
-interface PrimaryImage {
-  url: string;
+export interface PrimaryImage {
+  url: string | null;
 }
 
-interface TitleText {
+export interface TitleText {
   text: string;
 }
 
-interface ReleaseYear {
-  year: string;
+export interface ReleaseYear {
+  year: number | null;
 }
 
-export interface MoviesProps {
+export interface MovieSummary {
   id: string;
-  primaryImage: PrimaryImage;
+  primaryImage: PrimaryImage | null;
   titleText: TitleText;
   releaseYear: ReleaseYear;
+}
+
+export interface MoviesApiResponse {
+  movies: MovieSummary[];
+  page: number;
+  totalPages: number;
+  totalResults: number;
 }

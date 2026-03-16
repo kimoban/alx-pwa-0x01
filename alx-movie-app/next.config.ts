@@ -30,9 +30,6 @@ const nextConfig = {
       },
     ] as import('next/dist/shared/lib/image-config').RemotePattern[],
   },
-  env: {
-    TMDB_API_KEY: process.env.TMDB_API_KEY,
-  },
 };
 
 export default withPWA({

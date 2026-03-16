@@ -1,15 +1,15 @@
 # ALX Movie App (alx-pwa-0x01)
 
-A modern movie discovery application built with Next.js 14, TypeScript, and Tailwind CSS. Discover, explore, and enjoy movies from around the world using The Movie Database (TMDB) API.
+A modern movie discovery application built with Next.js, TypeScript, and Tailwind CSS. Discover, filter, and browse movies using the MoviesDatabase API via RapidAPI.
 
 ## 🎬 Features
 
-- **Movie Discovery**: Browse popular and trending movies
-- **Advanced Search**: Find movies by title with real-time search
+- **Movie Discovery**: Browse featured movies with responsive cards and richer visual hierarchy
+- **Client-side Search**: Narrow the current results page by title instantly
 - **Year & Genre Filtering**: Filter movies by release year and genre
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
-- **Modern UI**: Clean and intuitive interface with custom styling
-- **Movie Cards**: Detailed movie information with posters, ratings, and descriptions
+- **Modern UI**: Cinematic glassmorphism-inspired interface with stronger typography and motion
+- **Movie Cards**: Detailed movie information with posters and release-year badges
 - **Pagination**: Navigate through extensive movie collections
 - **Loading States**: Smooth loading animations and transitions
 
@@ -18,7 +18,7 @@ A modern movie discovery application built with Next.js 14, TypeScript, and Tail
 - **Framework**: Next.js 14 (Pages Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS with custom CineSeek branding
-- **API**: The Movie Database (TMDB) API
+- **API**: MoviesDatabase API via RapidAPI
 - **Package Manager**: npm
 
 ## 📁 Project Structure
@@ -85,10 +85,10 @@ alx-pwa-0x01/                        # Repository root
    Create a `.env.local` file in the `alx-movie-app` directory and add your API key:
 
    ```env
-   TMDB_API_KEY=your_tmdb_api_key_here
+   MOVIE_API_KEY=your_rapidapi_moviesdatabase_key_here
    ```
 
-   Get your API key from [TMDB](https://www.themoviedb.org/documentation/api)
+   Get your API key from RapidAPI's MoviesDatabase listing.
 
 4. **Run the development server:**
 
@@ -124,7 +124,7 @@ alx-pwa-0x01/                        # Repository root
 
 ### API Integration
 
-- `/api/fetch-movies` - Fetch movies from TMDB API with filtering options
+- `/api/fetch-movies` - Fetch movies from the MoviesDatabase API with filtering options
 
 ## 🌟 Components
 
@@ -142,9 +142,9 @@ alx-pwa-0x01/                        # Repository root
 
 ## 🔑 Environment Variables
 
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `TMDB_API_KEY` | API key for The Movie Database (TMDB) | Yes |
+| Variable        | Description                             | Required |
+| :-------------- | :-------------------------------------- | :------- |
+| `MOVIE_API_KEY` | API key for MoviesDatabase on RapidAPI  | Yes      |
 
 ## 📱 Responsive Design
 
@@ -189,4 +189,4 @@ For support and questions, please refer to the ALX Software Engineering Program 
 - [Live site on Vercel](https://alx-pwa-0x01-jet-seven.vercel.app/)
 - [Repository on GitHub](https://github.com/kimoban/alx-pwa-0x01)
 
-### Built with ❤️ for the ALX Software Engineering Program
+### Built for the ALX Software Engineering Program
