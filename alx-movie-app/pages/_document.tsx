@@ -15,7 +15,8 @@ export default function Document() {
           name="description"
           content="Discover and filter movies with a polished PWA movie browsing experience."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg+xml" href="/favicon-cineseek.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-chrome-192x192.png" />
         <link rel="icon" type="image/png" sizes="310x310" href="/icons/ms-icon-310x310.png" />
       </Head>
